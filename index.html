@@ -5,23 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <style>
-        body, html {
-            height: 100%;
+        /* Reset margins and padding so there are no accidental white borders */
+        * {
             margin: 0;
-            overflow: hidden; /* Removes scrollbars */
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            width: 100%;
+            background-color: #ffffff; /* Change this if you want a different background color under/behind the image */
+        }
+
+        .landing-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
         .landing-image {
-            /* Replace 'your-image.png' with your actual filename */
-            background-image: url("Homepage.png");
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover; /* Crops to fill screen */
-            /* Use 'background-size: contain;' if you don't want any cropping */
+            width: 100%;       /* Forces the image to match the exact width of the screen */
+            height: auto;      /* Keeps the original aspect ratio so the image doesn't stretch or distort */
+            display: block;    /* Removes the default extra bottom gap that browsers add to images */
         }
     </style>
 </head>
 <body>
-    <div class="landing-image"></div>
+
+    <div class="landing-container">
+        <!-- Your image is placed directly here -->
+        <img src="Homepage.png" alt="Homepage Landing" class="landing-image">
+    </div>
+
 </body>
 </html>
